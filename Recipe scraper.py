@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import tkinter as tk
 from tkinter import ttk
 from tkinter import *
+#hi there
 
 class RecipeScraper:
     def __init__(self, url):
@@ -86,7 +87,8 @@ class RecipeGUI:
 
     def search_recipes(self):
         # Example usage
-        scraper = RecipeScraper("https://www.bbcgoodfood.com/recipes/collection/"+self.drop_down.get().lower()+"-recipes")
+        for i in range(0,1):
+            scraper = RecipeScraper("https://www.bbcgoodfood.com/recipes/collection/"+self.drop_down.get().lower()+"-recipes")
         search_terms = self.search_entry.get().split(",")
         matching_ingredient_results = scraper.get_ingredients_with_search(search_terms)
         
